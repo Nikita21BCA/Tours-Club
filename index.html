@@ -3,135 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tours Club Template</title>
+    <title>Tours Club - Explore the World</title>
+    <meta name="description" content="Tours Club offers Chardham, Do Dham Yatra, and customized travel packages across India.">
+    <meta name="keywords" content="Chardham Yatra, Do Dham, India tours, travel packages, pilgrimage tours">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="logo.png" alt="Tours Club Logo">
             <h1>Tours Club</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
-        <h2>Discover the World with Us</h2>
-        <p>Your adventure starts here.</p>
-        <a href="#services" class="btn">Explore Now</a>
+        <h2>Unforgettable Journeys Await</h2>
+        <p>Book your next adventure with Tours Club – trusted by thousands.</p>
+        <a href="#services" class="btn">View Packages</a>
     </section>
 
     <section id="services">
         <h3>Our Services</h3>
         <div class="service">
+            <img src="chardham-icon.png" alt="Chardham Yatra" class="service-icon">
             <h4>Chardham Yatra</h4>
-            <p>Experience the holy shrines in the heart of the Himalayas.</p>
+            <p>Experience spiritual bliss across Yamunotri, Gangotri, Kedarnath, and Badrinath.</p>
             <button onclick="inquireService('Chardham Yatra')">Inquire Now</button>
         </div>
         <div class="service">
+            <img src="dodham-icon.png" alt="Do Dham Yatra" class="service-icon">
             <h4>Do Dham Yatra</h4>
-            <p>Explore Yamunotri & Gangotri with our specialized packages.</p>
+            <p>Explore Yamunotri & Gangotri with our expert-guided packages.</p>
             <button onclick="inquireService('Do Dham Yatra')">Inquire Now</button>
         </div>
     </section>
 
+    <section id="testimonials">
+        <h3>What Our Travelers Say</h3>
+        <blockquote>"The Chardham Yatra package was well-organized and budget-friendly!" – Priya S.</blockquote>
+        <blockquote>"Loved the personalized care. Highly recommend Tours Club!" – Ramesh T.</blockquote>
+    </section>
+
+    <section id="newsletter">
+        <h3>Stay Updated</h3>
+        <form onsubmit="subscribeUser(); return false;">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h3>Find Us</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="250" style="border:0;" allowfullscreen=""></iframe>
+    </section>
+
     <footer>
+        <p>Follow us on:
+            <a href="https://facebook.com/yourpage">Facebook</a> |
+            <a href="https://instagram.com/yourpage">Instagram</a>
+        </p>
         <p>© 2025 Tours Club. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-<style>
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    background-color: #333;
-    color: white;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-header .logo img {
-    height: 50px;
-    margin-right: 1em;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-#hero {
-    text-align: center;
-    padding: 2em;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-}
-
-#services {
-    padding: 2em;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.service {
-    margin: 1em auto;
-    padding: 1em;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-}
-
-.service button {
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 1em;
-    background: #333;
-    color: white;
-}
-</style>
-
-<script>
-// script.js
-function inquireService(serviceName) {
-    alert(`You inquired about: ${serviceName}`);
-}
-</script>
