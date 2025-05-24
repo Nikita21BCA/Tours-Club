@@ -1,120 +1,118 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f0f0f0;
+  color: #333;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    background-color: #333;
-    color: white;
-    flex-wrap: wrap;
+.navbar {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-header .logo img {
-    height: 50px;
-    margin-right: 1em;
+.logo img {
+  height: 50px;
+  margin-right: 10px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    margin: 0;
-    padding: 0;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
 }
 
 #hero {
-    text-align: center;
-    padding: 3em 1em;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  border-radius: 10px;
 }
 
 .btn {
-    background-color: #ff5722;
-    color: white;
-    padding: 0.75em 1.5em;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 1em;
-    display: inline-block;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-#services, #testimonials, #newsletter, #contact {
-    padding: 2em;
-    text-align: center;
-    background: #f9f9f9;
+.btn:hover {
+  background: linear-gradient(45deg, #ff5722, #e65100);
 }
 
-.service {
-    margin: 1em auto;
-    padding: 1em;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+.services-section {
+  padding: 3em 2em;
+  background: #fff;
+  text-align: center;
 }
 
-.service-icon {
-    height: 50px;
-    margin-bottom: 10px;
+.service-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
-.service button {
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+.service-card {
+  background: #fafafa;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
 }
 
-form input[type="email"] {
-    padding: 0.5em;
-    width: 250px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.service-card button {
+  margin-top: 1em;
+  background-color: #1976d2;
+  color: white;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-form button {
-    padding: 0.5em 1em;
-    border: none;
-    background: #28a745;
-    color: white;
-    border-radius: 5px;
-    margin-left: 0.5em;
+.service-card button:hover {
+  background-color: #0d47a1;
 }
 
 footer {
-    text-align: center;
-    padding: 1em;
-    background: #333;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    header, nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .service {
-        max-width: 90%;
-    }
+  text-align: center;
+  padding: 1.5em;
+  background: #1d1d1d;
+  color: white;
 }
